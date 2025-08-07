@@ -1,5 +1,6 @@
 fastapi
 uvicorn
+PyMuPDF
 pydantic
 python-dotenv
 requests
