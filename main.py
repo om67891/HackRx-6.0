@@ -21,3 +21,20 @@ def ask_questions(request: QuestionRequest):
         return {"answers": answers}
     except Exception as e:
         return {"error": str(e)}
+    
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello, FastAPI on Render!"}
+
+# 👇 Add this block at the bottom of main.py
+if __name__ == "__main__":
+    import uvicorn
+    import os
+
+    port = int(os.environ.get("PORT", 8000))  # Render will inject PORT
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
+
