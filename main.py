@@ -38,3 +38,12 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))  # Render will inject PORT
     uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
 
+import os
+
+# Safely get the port from environment, fallback to 8000
+port_str = os.environ.get("PORT")
+port = int(port_str) if port_str and port_str.isdigit() else 8000
+
+# Run your app
+import uvicorn
+uvicorn.run("main:app", host="0.0.0.0", port=port)
