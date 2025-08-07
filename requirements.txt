@@ -1,0 +1,15 @@
+fastapi==0.110.0
+uvicorn==0.29.0
+pydantic==2.7.0
+python-dotenv==1.0.0
+requests==2.31.0
+nltk==3.8.1
+torch==2.3.0
+transformers==4.40.1
+sentence-transformers==2.7.0
+langchain==0.1.16
+langchain-community==0.0.34
+chromadb==0.4.24
+docling==2.43.0
+tqdm==4.66.2
+pypdfium2==4.30.0
